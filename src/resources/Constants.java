@@ -2,6 +2,8 @@ package resources;
 
 public class Constants {
 
+    public static String trial = "-1\n1\n-2\n1";
+
     public static String frequencyConstants = "-15\n" +
             "-17\n" +
             "-16\n" +
