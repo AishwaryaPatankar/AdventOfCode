@@ -1,9 +1,7 @@
 import resources.Constants;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-import static java.util.Collections.emptyList;
 
 public class Day1 {
 
@@ -36,23 +34,22 @@ public class Day1 {
         ArrayList<Integer> totals = new ArrayList<Integer>();
         totals.add(0);
         Integer firstRepeatedFrequencyTotal = null;
-        int numbersCounter=0;
-        int totalsCounter=0;
+        int numbersCounter = 0;
+        int totalsCounter = 0;
 
-        while(firstRepeatedFrequencyTotal == null) {
+        while (firstRepeatedFrequencyTotal == null) {
             Integer currentSum = Integer.parseInt(numbersAsString[numbersCounter]);
             if (!totals.isEmpty()) {
                 currentSum = totals.get(totalsCounter) + Integer.parseInt(numbersAsString[numbersCounter]);
             }
 
-            if(totals.contains(currentSum)){
+            if (totals.contains(currentSum)) {
                 firstRepeatedFrequencyTotal = currentSum;
             }
             totals.add(currentSum);
-            numbersCounter = (numbersCounter+1)%(numbersAsString.length);
-            totalsCounter = (totalsCounter+1);
+            numbersCounter = (numbersCounter + 1) % (numbersAsString.length);
+            totalsCounter = (totalsCounter + 1);
         }
-        System.out.println(totals);
         return firstRepeatedFrequencyTotal;
     }
 
