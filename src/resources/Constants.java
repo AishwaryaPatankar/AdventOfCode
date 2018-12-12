@@ -1223,8 +1223,19 @@ public class Constants {
             "mphcuiabrnjzxokbgdtqeoylfa\n" +
             "mphcuisvrnczxwkbgmtpeoylfa";
 
+    
+    
+    
 
 
+    public static String trialClaim =
+            "#1 @ 861,330: 20x10\n" +
+            "#1 @ 861,330: 20x10\n" +
+            "#5 @ 100,100: 20x10\n" +
+            "#4 @ 1,1: 20x10\n" +
+            "#1 @ 861,330: 20x10";
+
+    
     public static String claims = "#1 @ 861,330: 20x10\n" +
             "#2 @ 491,428: 28x23\n" +
             "#3 @ 64,746: 20x27\n" +
