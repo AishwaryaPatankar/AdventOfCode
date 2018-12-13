@@ -28,12 +28,18 @@ public class Day4{
         String[] lines = input.split("\n");
         String guardName;
         Date date;
+        Boolean slept;
+        Boolean woke;
+        Boolean shiftChange;
 
         for(String line: lines){
-            guardName = line.split ("Guard #")[1].split(" begins")[0];
-            date = (Date) parser.parse(line.substring(1,17));
-            if (guardName!=null){
 
+            date = (Date) parser.parse(line.substring(1,17));
+            slept = line.contains("falls asleep");
+            woke = line.contains("wakes up");
+            shiftChange = line.contains("begins shift");
+            if (shiftChange){
+                guardName = line.split ("Guard #")[1].split(" begins")[0];
             }
         }
 
